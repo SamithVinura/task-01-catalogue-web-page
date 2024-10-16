@@ -1,23 +1,53 @@
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Catalog Page</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  </head>
+  <body>
     <header>
+      <div class="container">
         <!-- Company Logo and Navigation -->
+        <div class="header-left">
+          <img src="./assets/Logo.svg" alt="logo" class="logo-image" />
+          <img src="./assets/Hamburger.svg" alt="hamburger" class="hamburger" />
+          <div class="logo-text">Company Logo</div>
+        </div>
+
+        <div class="header-right">
+          <nav class="nav">
+            <ul>
+              <li><a href="/resources">Resources</a></li>
+              <li><a href="/home">Home</a></li>
+              <li><a href="/community">Community</a></li>
+              <li><a href="/blog">Blog</a></li>
+            </ul>
+          </nav>
+          <img src="./assets/Notification.svg" alt="logo" />
+          <img src="./assets/Profile.svg" alt="logo" />
+        </div>
+        <!-- Left-side mobile menu -->
+        <nav class="side-nav">
+          <ul>
+            <li><a href="/resources">Resources</a></li>
+            <li><a href="/home">Home</a></li>
+            <li><a href="/community">Community</a></li>
+            <li><a href="/blog">Blog</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
-    
+
     <section class="catalogue">
-        <!-- Catalog Section Content -->
+      <!-- Catalog Section Content -->
     </section>
-    
+
     <section class="recent-activities">
-        <!-- Recent Activities Section -->
+      <!-- Recent Activities Section -->
     </section>
-    
-    
+
     <script src="js/script.js"></script>
-</body>
+  </body>
 </html>
