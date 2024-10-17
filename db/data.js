@@ -1,4 +1,4 @@
-[
+export const data =[
   {
     "id": "A",
     "type": "Course",

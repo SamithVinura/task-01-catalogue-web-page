@@ -22,7 +22,6 @@ body {
   color: white;
   background-color: $primary-color;
   padding: 20px 40px;
-  height: 10vh;
 
   .header-left {
     display: flex;
@@ -140,7 +139,6 @@ body {
 .main {
   padding: 40px;
   background-color: $background-color;
-  height: 80vh;
 
   // Catalog section
   .catalog-section {
@@ -320,83 +318,111 @@ body {
     }
   }
 
-  // Recent Activities section
-  .recent-activities-section {
-    margin-top: 50px;
+  .card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 50px;
+  }
 
-    h2 {
-      color: $primary-color;
-      font-size: 2rem;
-      margin-bottom: 20px;
-    }
+  .card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 300px;
+  }
 
-    // Slider
-    .recent-activities-slider {
-      display: flex;
-      overflow: hidden;
-      position: relative;
-      width: 100%;
-      height: auto;
-
-      .activity {
-        flex: 0 0 100%;
-        transition: transform 0.3s ease;
-        display: none;
-
-        &.active {
-          display: block;
-        }
-
-        img {
-          width: 100%;
-          height: auto;
-          object-fit: cover;
-        }
-
-        .activity-details {
-          padding: 15px;
-          background-color: white;
-
-          h4 {
-            font-size: 1.2rem;
-            color: $text-color;
-            margin-bottom: 10px;
-          }
-
-          p {
-            font-size: 1rem;
-            color: $secondary-text-color;
-          }
-        }
-      }
-    }
-
-    // Navigation buttons
-    button {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      background-color: $primary-color;
+  .card-header {
+    background-image: url("../assets/Image.svg");
+    background-size: 200px 100px;
+    background-color: #71aac4;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 20px;
+    display: flex;
+    gap: 10px;
+    align-items: start;
+    height: 220px;
+    img {
+      width: 50px;
+      width: 50px;
       color: white;
-      border: none;
-      padding: 10px;
-      cursor: pointer;
-      border-radius: 50%;
-      transition: background-color 0.3s ease;
+    }
+  }
 
-      &:hover {
-        background-color: $primary-hover-color; // Use custom hover color
-        transition: background-color 0.3s ease; // Optional: smooth transition
-      }
+  .card-header h3 {
+    color: #fff;
+    margin: 0;
+  }
 
-      &.prev {
-        left: 10px;
-      }
+  .card-header .icons {
+    display: flex;
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background-color: white;
+    color: rgb(0, 0, 0);
+    border-radius: 10px;
+    img {
+      width: 30px;
+      width: 30px;
+      color: white;
+    }
+  }
 
-      &.next {
-        right: 10px;
+  .card-body {
+    padding: 20px;
+
+    .enrol-container {
+      display: flex;
+      flex-direction: row;
+      gap: 5px;
+      .enrol-person {
+        flex-direction: row;
+        background-color: $pink-color;
+        padding: 10px;
+        color: white;
+        font-weight: normal;
+        border-radius: 5px;
       }
     }
+  }
+
+  .card-body .enrolled,
+  .card-body .duration {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+
+  .card-body p {
+    margin: 0;
+    font-weight: bold;
+  }
+
+  .card-footer {
+    margin: 15px;
+  }
+
+  .button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+
+  .button.enrol {
+    background-color: $purple-color;
+    color: #fff;
+  }
+
+  .button.view {
+    background-color: white;
+    color: #000;
+    border: 1px solid $border-color;
   }
 }
 
@@ -408,7 +434,6 @@ body {
   color: white;
   background-color: $primary-color;
   padding: 20px 40px;
-  height: 10vh;
 
   .footer-left {
     display: flex;
