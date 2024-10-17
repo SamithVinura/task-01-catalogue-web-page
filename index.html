@@ -6,10 +6,11 @@
     <link rel="stylesheet" href="./css/style.css" />
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   </head>
+
   <body>
+    <!-- Header Section -->
     <header>
       <div class="header-container">
-        <!-- Company Logo and Navigation -->
         <div class="header-left">
           <img src="./assets/Logo.svg" alt="logo" class="logo-image" />
           <img src="./assets/Hamburger.svg" alt="hamburger" class="hamburger" />
@@ -25,8 +26,8 @@
               <li><a href="/blog">Blog</a></li>
             </ul>
           </nav>
-          <img src="./assets/Notification.svg" alt="logo" />
-          <img src="./assets/Profile.svg" alt="logo" />
+          <img src="./assets/Notification.svg" alt="notification" />
+          <img src="./assets/Profile.svg" alt="profile" />
         </div>
         <!-- Left-side mobile menu -->
         <nav class="side-nav">
@@ -40,6 +41,7 @@
       </div>
     </header>
 
+    <!-- MainSection -->
     <main class="main">
       <!-- Catalog Section -->
       <section class="catalog-section">
@@ -77,8 +79,29 @@
           </div>
         </div>
       </section>
-    </main>
 
+      <!-- All Courses Section -->
+      <section>
+        <div class="card-container" id="card-container">
+          <!-- Cards will be appended here -->
+        </div>
+      </section>
+
+      <!-- Recent Activities Section -->
+      <section class="recent-activities-section">
+        <h2>Recent Activities</h2>
+        <div class="slider-container">
+          <div class="slider" id="recent-slider">
+            <!-- Cards will be appended here -->
+          </div>
+          <div class="slide-btn">
+            <button class="prev" id="prev-slide">&#10094;</button>
+            <button class="next" id="next-slide">&#10095;</button>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- Footer Section -->
     <footer>
       <div class="footer-container">
         <div class="footer-left">
