@@ -10,6 +10,7 @@
 
 body {
   font-family: "Inter", sans-serif;
+
   &.no-scroll {
     overflow: hidden;
   }
@@ -22,22 +23,27 @@ body {
   background-color: $primary-color;
   padding: 20px 40px;
   height: 10vh;
+
   .header-left {
     display: flex;
     flex-direction: row;
     align-items: center;
     gap: 5px;
+
     .logo-image {
       width: 50px;
       height: 50px;
     }
+
     .logo-text {
       font-weight: normal;
     }
+
     .hamburger {
       display: none;
       cursor: pointer;
     }
+
     &:hover {
       cursor: pointer;
     }
@@ -49,11 +55,13 @@ body {
     align-items: center;
     margin-left: auto;
     gap: 30px;
+
     .nav {
       ul {
         display: flex;
         list-style: none;
         flex-wrap: wrap;
+
         li {
           a {
             color: white;
@@ -61,6 +69,7 @@ body {
             padding: 0 15px;
             font-size: 1rem;
             font-weight: 300;
+
             &:hover {
               color: $glow-color;
               text-shadow: 0 0 8px $glow-color, 0 0 15px $glow-color,
@@ -95,18 +104,22 @@ body {
     padding: 20px;
     z-index: 1000;
     transition: left 0.3s ease;
+
     ul {
       list-style: none;
       width: 100%;
+
       li {
         width: 100%;
         margin: 10px 0;
+
         a {
           color: white;
           text-decoration: none;
           padding: 10px;
           display: block;
           width: 100%;
+
           &:hover {
             color: $glow-color;
             text-shadow: 0 0 8px $glow-color, 0 0 15px $glow-color,
@@ -123,6 +136,270 @@ body {
   }
 }
 
+// Main content styles
+.main {
+  padding: 40px;
+  background-color: $background-color;
+  height: 80vh;
+
+  // Catalog section
+  .catalog-section {
+    h2 {
+      color: $primary-color;
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    // Filters and Search
+    .filters {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 20px;
+      align-items: center;
+      justify-content: space-between;
+
+      select {
+        padding: 10px;
+        font-size: 1rem;
+        border: 1px solid $border-color;
+        border-radius: 40px;
+        width: 175px;
+      }
+
+      input {
+        padding: 10px;
+        font-size: 1rem;
+        border: 1px solid $border-color;
+        border-radius: 40px;
+      }
+
+      .filters-left {
+        display: flex;
+        gap: 10px;
+
+        align-items: center;
+
+        .reset-icon {
+          width: 30px;
+          height: 30px;
+          cursor: pointer;
+        }
+
+        .filter-btn {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          gap: 5px;
+        }
+      }
+
+      .filters-right {
+        .search-container {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          width: 100%;
+          border: 1px solid $border-color;
+          border-radius: 40px;
+          overflow: hidden;
+
+          input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            outline: none;
+            font-size: 1rem;
+            color: #999;
+
+            &::placeholder {
+              color: #999;
+            }
+          }
+
+          .search-btn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #33677e;
+            /* Color of the button */
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            border-radius: 0 40px 40px 0;
+
+            img {
+              width: 20px;
+              height: 20px;
+            }
+
+            &:hover {
+              background-color: #285563;
+              /* Slightly darker color on hover */
+            }
+          }
+        }
+      }
+    }
+
+    // Catalog container
+    .catalog-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+
+      .card {
+        background-color: white;
+        border: 1px solid $border-color;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+        .card-header {
+          position: relative;
+
+          img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+          }
+
+          .type-badge {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background-color: $primary-color;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 0.8rem;
+          }
+        }
+
+        .card-body {
+          padding: 15px;
+
+          h4 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: $text-color;
+          }
+
+          p {
+            font-size: 1rem;
+            color: $secondary-text-color;
+            margin-bottom: 15px;
+          }
+
+          .card-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .duration {
+              font-size: 0.9rem;
+              color: $secondary-text-color;
+            }
+
+            .btn {
+              padding: 10px 20px;
+              background-color: $primary-color;
+              color: white;
+              border: none;
+              border-radius: 5px;
+              cursor: pointer;
+              transition: background-color 0.3s ease;
+
+              &:hover {
+                background-color: $primary-hover-color; // Use pre-defined hover color
+                transition: background-color 0.3s ease;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // Recent Activities section
+  .recent-activities-section {
+    margin-top: 50px;
+
+    h2 {
+      color: $primary-color;
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    // Slider
+    .recent-activities-slider {
+      display: flex;
+      overflow: hidden;
+      position: relative;
+      width: 100%;
+      height: auto;
+
+      .activity {
+        flex: 0 0 100%;
+        transition: transform 0.3s ease;
+        display: none;
+
+        &.active {
+          display: block;
+        }
+
+        img {
+          width: 100%;
+          height: auto;
+          object-fit: cover;
+        }
+
+        .activity-details {
+          padding: 15px;
+          background-color: white;
+
+          h4 {
+            font-size: 1.2rem;
+            color: $text-color;
+            margin-bottom: 10px;
+          }
+
+          p {
+            font-size: 1rem;
+            color: $secondary-text-color;
+          }
+        }
+      }
+    }
+
+    // Navigation buttons
+    button {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: $primary-color;
+      color: white;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+      border-radius: 50%;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: $primary-hover-color; // Use custom hover color
+        transition: background-color 0.3s ease; // Optional: smooth transition
+      }
+
+      &.prev {
+        left: 10px;
+      }
+
+      &.next {
+        right: 10px;
+      }
+    }
+  }
+}
+
 .footer-container {
   display: flex;
   flex-direction: row;
@@ -132,26 +409,32 @@ body {
   background-color: $primary-color;
   padding: 20px 40px;
   height: 10vh;
+
   .footer-left {
     display: flex;
     flex-direction: row;
     align-items: center;
     gap: 5px;
+
     .logo-image {
       width: 50px;
       height: 50px;
     }
+
     .logo-text {
       font-weight: normal;
     }
+
     &:hover {
       cursor: pointer;
     }
   }
+
   .footer-right {
     display: flex;
     justify-content: center;
     flex-grow: 1;
+
     a {
       color: white;
       text-decoration: none;
@@ -168,38 +451,67 @@ body {
 @media (max-width: 768px) {
   .header-container {
     padding: 15px 30px;
+
     .header-left {
       .logo-image {
         width: 30px;
         height: 30px;
       }
+
       .logo-text {
         font-size: 1.2rem;
       }
     }
+
     .header-right {
       gap: 20px;
+
       .nav ul li a {
         font-size: 0.9rem;
         padding: 0 10px;
       }
+
       img {
         width: 30px;
         height: 30px;
       }
     }
   }
+
+  .main {
+    padding: 30px;
+
+    .catalog-section {
+      .catalog-container {
+        grid-template-columns: 1fr;
+      }
+    }
+  }
+
+  .recent-activities-section {
+    .recent-activities-slider {
+      .activity {
+        img {
+          height: 200px;
+        }
+      }
+    }
+  }
+
   .footer-container {
     padding: 15px 30px;
+
     .footer-left {
       .logo-image {
         width: 30px;
         height: 30px;
       }
+
       .logo-text {
         font-size: 1.2rem;
       }
     }
+
     .footer-right {
       a {
         font-size: 0.9rem;
@@ -213,52 +525,121 @@ body {
 @media (max-width: 426px) {
   .header-container {
     padding: 15px 20px;
+
     .header-left {
       gap: 10px;
+
       .logo-image {
         width: 20px;
         height: 20px;
       }
+
       .hamburger {
         display: flex;
         width: 20px;
         height: 15px;
       }
+
       .logo-text {
         display: none;
       }
     }
+
     .header-right {
       gap: 20px;
+
       .nav {
         display: none;
       }
+
       img {
         width: 20px;
         height: 20px;
       }
     }
   }
+
   // Side navigation active state
   .side-nav.active {
     display: block;
   }
+
+  .main {
+    padding: 20px;
+
+    .catalog-section {
+      h2 {
+        font-size: 1.5rem;
+      }
+
+      .filters {
+        flex-direction: column;
+
+        input {
+          margin-top: 10px;
+        }
+
+        .filters-left {
+          flex-direction: column;
+          width: 100%;
+
+          select {
+            width: 100%;
+            flex-grow: 1;
+          }
+
+          .filter-btn {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            width: 100%;
+            gap: 5px;
+
+            select {
+              width: 100%;
+              flex-grow: 1;
+            }
+          }
+        }
+
+        .filters-right {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .recent-activities-section {
+    h2 {
+      font-size: 1.5rem;
+    }
+
+    button {
+      padding: 8px;
+    }
+  }
+
   .footer-container {
     padding: 15px 20px;
     justify-content: space-between;
+
     .footer-left {
       gap: 10px;
+
       .logo-image {
         width: 20px;
         height: 20px;
       }
+
       .logo-text {
         font-size: 0.8rem;
       }
     }
+
     .footer-right {
       align-items: center;
       flex-grow: 0;
+
       a {
         font-size: 0.8rem;
         padding: 0 5px;

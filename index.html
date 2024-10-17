@@ -41,7 +41,42 @@
     </header>
 
     <main class="main">
-      <!-- Catalog Section Content -->
+      <!-- Catalog Section -->
+      <section class="catalog-section">
+        <h2>Catalogue</h2>
+
+        <!-- Filters and Search -->
+        <div class="filters">
+          <div class="filters-left">
+            <div class="filter-btn">
+              <select id="filter-options">
+                <option value="all">Filter</option>
+                <option value="course">Course</option>
+                <option value="webinar">Webinar</option>
+              </select>
+              <img
+                src="./assets/Reset.svg"
+                type="button"
+                id="reset-filters"
+                class="reset-icon"
+              />
+            </div>
+            <select id="sort-options">
+              <option value="default">Sort</option>
+              <option value="duration">Duration</option>
+            </select>
+          </div>
+
+          <div class="filters-right">
+            <div class="search-container">
+              <input type="text" id="search" placeholder="Search" />
+              <button class="search-btn">
+                <img src="./assets/Search.svg" alt="Search" />
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
     <footer>
